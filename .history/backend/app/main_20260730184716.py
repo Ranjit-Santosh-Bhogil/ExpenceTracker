@@ -35,7 +35,7 @@ app = FastAPI(
 
 # CORS allows the React frontend to call this API during development.
 ALLOWED_ORIGINS = [
-    "https://expence-tracker-gamma-dun.vercel.app"
+    
 ]
 
 app.add_middleware(

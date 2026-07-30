@@ -4,7 +4,7 @@ import axios from 'axios'
 
 // Use Vite dev-server proxy in development to avoid CORS issues.
 // Override with VITE_API_URL when deploying to production.
-const API_BASE_URL = import.meta.env.VITE_API_URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/ap
 
 // Create an axios instance with default configuration
 const api = axios.create({
