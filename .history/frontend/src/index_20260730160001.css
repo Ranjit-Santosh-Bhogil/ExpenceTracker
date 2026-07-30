@@ -1,0 +1,16 @@
+/* frontend/src/index.css */
+
+/* Tailwind's base styles — resets browser defaults and provides a consistent foundation */
+@tailwind base;
+
+/* Tailwind's component utilities — pre-built component classes */
+@tailwind components;
+
+/* Tailwind's utility classes — the bread and butter: flex, p-4, text-blue-500, etc. */
+@tailwind utilities;
+
+/* Custom global styles */
+body {
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

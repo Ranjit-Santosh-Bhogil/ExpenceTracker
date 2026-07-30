@@ -1,0 +1,9 @@
+/* frontend/src/index.css */
+
+@import "tailwindcss";
+
+/* Custom global styles */
+body {
+  background-color: #f3f4f6; /* Tailwind's gray-100 */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
