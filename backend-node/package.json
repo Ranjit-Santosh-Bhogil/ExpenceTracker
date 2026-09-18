@@ -10,21 +10,26 @@
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:pull": "prisma db pull",
-    "test": "node --test tests/*.test.js"
+    "test": "node --test tests/*.test.js",
+    "test:frontend": "node --test tests/frontend-api.test.js",
+    "test:deploy": "node scripts/pre-deploy-test.js"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^6.5.0",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "pg": "^8.23.0",
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "axios": "^1.20.0",
     "prisma": "^6.5.0",
     "supertest": "^7.0.0"
   }

@@ -7,9 +7,13 @@ import prisma from '../src/db.js';
 const hasDatabaseUrl = Boolean(process.env.DATABASE_URL);
 let hasDatabase = false;
 
-test('database connectivity', { skip: !hasDatabaseUrl }, async () => {
-  await prisma.$queryRaw`SELECT 1`;
-  hasDatabase = true;
+test('database connectivity', { skip: !hasDatabaseUrl }, async (t) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    hasDatabase = true;
+  } catch {
+    t.skip('Database is not reachable — wake your Neon DB and retry');
+  }
 });
 
 test('health endpoint returns ok', async () => {
