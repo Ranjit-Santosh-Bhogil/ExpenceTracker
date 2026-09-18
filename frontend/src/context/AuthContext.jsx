@@ -10,7 +10,7 @@ function getErrorMessage(error, fallback) {
   const detail = error.response?.data?.detail
   if (!detail) {
     return error.message === 'Network Error'
-      ? 'Cannot reach the server. Make sure the backend is running on port 8000.'
+      ? 'Cannot reach the server. Make sure the backend is running on port 3000.'
       : fallback
   }
   if (typeof detail === 'string') return detail
